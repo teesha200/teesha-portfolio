@@ -58,13 +58,14 @@ h2 {
 
 h2::after {
   content: '';
-  width: 50px;
+  width: 120px;     
   height: 3px;
   background: #60a5fa;
   position: absolute;
   left: 0;
   bottom: 0;
 }
+
 
 /* Links */
 a {
