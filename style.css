@@ -1,58 +1,238 @@
+/* General */
 body {
-    background-color: #0f172a;
-    color: #e2e8f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0 20px;
-    line-height: 1.6;
-  }
-  
-  section {
-    padding: 40px 0;
-    border-bottom: 1px solid #1e293b;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    color: #94a3b8;
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    color: #60a5fa;
-    margin-bottom: 1rem;
-  }
-  
-  a {
-    color: #3b82f6;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .note {
-    font-size: 0.85rem;
-    color: #94a3b8;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    color: #64748b;
-  }
-  
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #0f172a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #1e293b;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar a {
+  color: #e2e8f0;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #60a5fa;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-radius: 12px;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+/* Card text in dark mode */
+.card {
+  color: #e2e8f0; /* make sure text is visible in dark cards */
+}
+
+/* Card text in light mode */
+body.light .card {
+  background: #e2e8f0;
+  color: #0f172a; /* dark text on light background */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.card a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #94a0b4;
+}
+
+/* Skills */
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.badge {
+  background: #334155;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Certificates */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+.cert-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.5s;
+}
+.cert-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Hobbies */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+.hobby-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.5s;
+}
+.hobby-grid img:hover {
+  transform: scale(1.05);
+}
+
+ /* Experience */
+.experience-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.experience-details {
+  flex: 2; /* takes more space */
+}
+
+.certificate {
+  flex: 1; /* smaller column */
+  text-align: center;
+}
+
+.certificate img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 7px;
+  transition: transform 0.3s ease;
+}
+
+.certificate img:hover {
+  transform: scale(1.05);
+}
+
+..nav-icon {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Light mode */
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+body.light .navbar {
+  background: #f1f5f9;
+}
+body.light .card {
+  background: #e2e8f0;
+}
+body.light .badge {
+  background: #cbd5e1;
+}
+
+/* Default link style */
+a {
+  color: #60a5fa; /* light blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+a:hover {
+  color: #3b82f6; /* brighter blue */
+  text-decoration: underline;
+}
+
+/* Light mode links */
+body.light a {
+  color: #2563eb; /* darker blue for light background */
+}
+
+body.light a:hover {
+  color: #1e40af; /* stronger hover in light mode */
+}

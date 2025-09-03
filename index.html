@@ -7,68 +7,151 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">TJ</div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- SVG Computer Icon -->
+    <div class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+          fill="white" viewBox="0 0 24 24">
+        <path d="M4 4h16v12H4V4zm0 14h16v2H4v-2z"/>
+      </svg>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero fade-in">
     <h1>Teesha Jariwala</h1>
     <p class="subtitle">Computer Science Student | Web Dev Enthusiast</p>
-    <p>Passionate about problem-solving, tech learning, debugging, and creative innovation.</p>
+    <p>Passionate about problem-solving, tech learning, debugging, and creative designs.</p>
   </section>
 
   <!-- Projects -->
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>DonorHub:</strong> MERN stack project for managing donor data.</li>
-      <li><strong>Thrifting Through Trend:</strong> Clothing platform with theme switching.</li>
-      <li><strong>Encryption Tool:</strong> Python-based encryption/decryption system.</li>
-    </ul>
-  </section>
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+  <div class="projects-grid">
 
-  <!-- Experience -->
-  <section>
-    <h2>Experience</h2>
-    <p>Web Dev Intern at Bluestock Fintech – Built IPO listing and comparison site.</p>
-  </section>
+    <!-- RoomieRadar (Video Demo) -->
+    <div class="card">
+      <div class="video-container">
+        <video controls>
+          <source src="videos/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <h3>RoomieRadar</h3>
+      <p>A web app to help users find compatible roommates using preferences and matching algorithms.</p>
+      <a href="https://github.com/teesha200/RoomieRadar" target="_blank">GitHub</a>
+    </div>
+
+    <!-- DonorHub -->
+    <div class="card">
+      <img src="images/donorhub.png" alt="DonorHub Screenshot">
+      <h3>DonorHub</h3>
+      <p>MERN stack project for managing donor data and help organisation to organise donor's data.</p>
+      <a href="https://github.com/teesha200/DonorHub" target="_blank">GitHub</a>
+    </div>
+
+    <!-- Encryption Tool -->
+    <div class="card">
+      <img src="images/encryption.png" alt="Encryption Tool">
+      <h3>Encryption Tool</h3>
+      <p>Python-based encryption and decryption system for messages.</p>
+      <a href="https://github.com/teesha200/EncryptionnDecryption" target="_blank">GitHub</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="fade-in">
+  <h2>Experience</h2>
+
+  <!-- Single unified card -->
+  <div class="card experience-wrapper">
+    <!-- Left: Experience Details -->
+    <div class="experience-details">
+      <h3>Web Dev Intern – Bluestock Fintech</h3>
+      <ul>
+        <li>Built IPO listing and comparison site with React + Node.js</li>
+        <li>Improved page load speed by <strong>25%</strong> with optimized queries</li>
+        <li>Collaborated with <strong>5+ team members</strong> using Git & Agile</li>
+      </ul>
+    </div>
+
+    <!-- Right: Certificate -->
+    <div class="certificate">
+      <h3>Certificate</h3>
+      <a href="images/internship.png" target="_blank">
+        <img src="images/internship.png" alt="Certificate">
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Skills -->
-  <section>
+  <section id="skills" class="fade-in">
     <h2>Skills</h2>
-    <ul>
-      <li>C, Python, HTML, JavaScript</li>
-      <li>MongoDB, MySQL</li>
-      <li>Linux, Visual Studio, NetBeans</li>
-    </ul>
+    <div class="skills-badges">
+      <span class="badge">C</span>
+      <span class="badge">Python</span>
+      <span class="badge">HTML</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">MongoDB</span>
+      <span class="badge">MySQL</span>
+      <span class="badge">Linux</span>
+      <span class="badge">VS Code</span>
+    </div>
   </section>
 
   <!-- Certificates -->
-  <section>
+  <section id="certificates" class="fade-in">
     <h2>Certificates</h2>
-    <ul>
-      <li>Cybersecurity & Ethical Hacking – Wayspire</li>
-      <li>Flipkart Runway: Season 4</li>
-      <li>Sustain-a-Thon – Indian Oil</li>
-      <li>Myntra Hackerank</li>
-      <li>Drones Workshop – Chitkara University</li>
-    </ul>
-    <p class="note">(Add links or upload files later.)</p>
+    <div class="cert-grid">
+      <a href="#" target="_blank"><img src="images/cybersecurity.png" alt="Cybersecurity Cert"></a>
+      <a href="#" target="_blank"><img src="images/flipkart.png" alt="Flipkart Runway"></a>
+      <a href="#" target="_blank"><img src="images/sustainathon.png" alt="Sustain-a-Thon"></a>
+      <a href="#" target="_blank"><img src="images/myntra.png" alt="Myntra Hackerank"></a>
+      <a href="#" target="_blank"><img src="images/drones.png" alt="Drones Workshop"></a>
+    </div>
   </section>
 
-  <!-- Resume -->
-  <section>
-    <h2>Resume</h2>
-    <a href="Teesha_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-  </section>
+<!-- Hobbies -->
+<section id="hobbies" class="fade-in">
+  <h2>Hobbies</h2>
+  <ul>
+    <li>Acrylic Pinting</li>
+  </ul>
+  <div class="hobby-grid">
+    <a href="#" target="_blank"><img src="images/1.jpg" alt="1"></a>
+    <a href="#" target="_blank"><img src="images/2.jpg" alt="2"></a>
+    <a href="#" target="_blank"><img src="images/4.jpg" alt="4"></a>
+    <a href="#" target="_blank"><img src="images/5.jpg" alt="5"></a>
+    <a href="#" target="_blank"><img src="images/6.jpg" alt="6"></a>
+    <a href="#" target="_blank"><img src="images/7.jpg" alt="7"></a>
+  </div>
+</section>
 
   <!-- Contact -->
-  <section>
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <ul>
       <li>Email: <a href="mailto:jariwalateesha53@gmail.com">jariwalateesha53@gmail.com</a></li>
       <li>GitHub: <a href="https://github.com/teesha200">teesha200</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/teesha-jariwala-2248342b4">Teesha Jariwala</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/teeshajariwala72/">Teesha Jariwala</a></li>
     </ul>
   </section>
 
   <footer>&copy; 2025 Teesha Jariwala</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
